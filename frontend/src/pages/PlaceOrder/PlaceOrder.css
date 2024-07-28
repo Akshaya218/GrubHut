@@ -30,6 +30,18 @@
     width: 100%;
     max-width: max(40%,500px);
 }
+
+.payment-method h3{
+    font-size: 25px;
+}
+
+.payment-method input{
+    border: 2px black;
+    padding: 10px;
+    margin-top: 20px;
+    color: darkgray;
+
+}
 .place-order-submit{
     margin-top: 50px;
     border: none;

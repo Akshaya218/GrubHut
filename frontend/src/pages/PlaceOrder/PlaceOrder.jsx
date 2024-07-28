@@ -21,6 +21,7 @@ const PlaceOrder = () => {
     })
 
     const { getTotalCartAmount, token, food_list, cartItems, url, setCartItems } = useContext(StoreContext);
+    const [paymentMethod, setPaymentMethod] = useState('stripe');
 
     const navigate = useNavigate();
 
@@ -96,6 +97,34 @@ const PlaceOrder = () => {
                         <div className="cart-total-details"><b>Total</b><b>${getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 5}</b></div>
                     </div>
                 </div>
+
+                <div className="payment-method">
+                <br/><br/>
+                <h3>Payment Method</h3>
+                <br/>
+                <div>
+                    <input 
+                        type="radio" 
+                        id="cod" 
+                        name="paymentMethod" 
+                        value="cod" 
+                        checked={paymentMethod === 'cod'} 
+                        onChange={(e) => setPaymentMethod(e.target.value)} 
+                    />
+                    <label htmlFor="cod"> Cash on Delivery</label>
+                </div>
+                <div>
+                    <input 
+                        type="radio" 
+                        id="stripe" 
+                        name="paymentMethod" 
+                        value="stripe" 
+                        checked={paymentMethod === 'stripe'} 
+                        onChange={(e) => setPaymentMethod(e.target.value)} 
+                    />
+                    <label htmlFor="stripe"> Stripe Payment</label>
+                </div>
+            </div>
                 <button className='place-order-submit' type='submit'>Proceed To Payment</button>
             </div>
         </form>
