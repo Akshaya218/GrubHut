@@ -28,9 +28,21 @@
     gap: 40px;
 }
 
+.navbar-right img{
+    max-width: 30px;
+    max-height: 30px;
+}
+
 .navbar-search-icon{
 position: relative;
+
 }
+.navbar-search-icon img{
+    max-width: 30px;
+    max-height: 30px;
+
+}
+
 
 .navbar-search-icon .dot{
     position: absolute;
