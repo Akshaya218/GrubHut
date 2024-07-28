@@ -6,6 +6,7 @@ import { assets, url } from '../../assets/assets';
 
 const Order = () => {
 
+  const url="https://grubhut-backend.onrender.com"
   const [orders, setOrders] = useState([]);
 
   const fetchAllOrders = async () => {
