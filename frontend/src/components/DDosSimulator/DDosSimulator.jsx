@@ -2,7 +2,7 @@ import React from 'react';
 
 const DDosSimulator = () => {
   const simulateDDoSAttack = () => {
-    for (let i = 0; i < 1000; i++) { // Simulate a DDoS attack with 1000 requests
+    for (let i = 0; i < 20000; i++) { // Simulate a DDoS attack with 1000 requests
       fetch('http://localhost:4000/simulate-ddos')
         .then(response => response.text())
         .then(data => console.log(data))
