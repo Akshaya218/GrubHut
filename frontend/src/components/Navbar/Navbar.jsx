@@ -3,6 +3,7 @@ import './Navbar.css'
 import { assets } from '../../assets/assets'
 import { Link, useNavigate } from 'react-router-dom'
 import { StoreContext } from '../../Context/StoreContext'
+import DDosSimulator from '../DDosSimulator/DDosSimulator';
 
 const Navbar = ({ setShowLogin }) => {
 
@@ -41,7 +42,7 @@ const Navbar = ({ setShowLogin }) => {
             </ul>
           </div>
         }
-
+      <DDosSimulator />
       </div>
     </div>
   )
