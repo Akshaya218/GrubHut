@@ -26,13 +26,6 @@ app.use("/images",express.static('uploads'))
 app.use("/api/cart", cartRouter)
 app.use("/api/order",orderRouter)
 
-// server.js (Backend)
-app.get('/simulate-ddos', (req, res) => {
-  // Simulate a resource-heavy operation
-  for (let i = 0; i < 1e7; i++) {}
-  res.send('Heavy operation completed.');
-});
-
 
 app.get("/", (req, res) => {
     res.send("API Working")
